@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="tr">
       <head>
-        <link rel="icon" href="/icons/favicon.ico" />
+        <link rel="icon" href="/icons/favicon-grey.ico" />
       </head>
       <body>
         <ReduxProvider>
