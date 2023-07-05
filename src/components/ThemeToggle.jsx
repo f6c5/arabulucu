@@ -8,7 +8,7 @@ const ThemeToggle = () => {
 
   return (
     <div
-      className="themeToggleContainer"
+      className="theme-toggle-container"
       onClick={() => changeThemeStore(theme === "light" ? "dark" : "light")}
     >
       <div className="icon">🌙</div>

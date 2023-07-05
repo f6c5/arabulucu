@@ -5,7 +5,7 @@ import ReduxProvider from "@/redux/provider";
 import ThemeProvider from "@/components/ThemeProvider";
 
 export const metadata = {
-  title: "AraBulucu",
+  title: "Arabulucu",
   description:
     "Arabuluculuk Hizmetleri - Anlaşmazlıkları çözmek için profesyonel arabuluculuk hizmetleri sunuyoruz. Deneyimli ve uzman arabulucularımız, ticari, aile, işyeri ve diğer alanlarda arabuluculuk sürecini yönetir. Anlaşmazlıklarınızı hızlı, etkili ve maliyet açısından avantajlı bir şekilde çözmek için arabuluculuğun gücünden faydalanın. Randevu talepleri için web sitemizi ziyaret edin ve alanında uzman arabulucularımızla iletişime geçin.",
 };
