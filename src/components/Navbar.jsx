@@ -4,6 +4,34 @@ import Link from "next/link";
 import React, { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 
+const links = [
+  {
+    id: 1,
+    title: "Anasayfa",
+    url: "/",
+  },
+  {
+    id: 2,
+    title: "Arabuluculuk",
+    url: "/mediation",
+  },
+  {
+    id: 3,
+    title: "Randevu",
+    url: "/appointment",
+  },
+  {
+    id: 4,
+    title: "Hakkımızda",
+    url: "/about",
+  },
+  {
+    id: 5,
+    title: "İletişim",
+    url: "/contact",
+  },
+];
+
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
@@ -15,15 +43,16 @@ const Navbar = () => {
         <ThemeToggle />
       </div>
       <div className="links">
-        <Link href="/" className="link">
-          Ana Sayfa
-        </Link>
-        <Link href="/about" className="link">
-          Hakkımızda
-        </Link>
-        <Link href="/blog" className="link">
-          Blog
-        </Link>
+        {links.map((link) => (
+          <Link
+            key={link.id}
+            href={link.url}
+            className="link"
+            onClick={() => setOpen(false)}
+          >
+            {link.title}
+          </Link>
+        ))}
       </div>
       <div
         className={`burger-menu ${open && "active"} `}
