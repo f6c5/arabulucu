@@ -7,7 +7,7 @@ import ThemeToggle from "./ThemeToggle";
 const Navbar = () => {
   const [open, setOpen] = useState(false);
   return (
-    <div className={open ? "navbar-container show-menu" : "navbar-container"}>
+    <div className={`navbar-container-fluid ${open && "show-menu"}`}>
       <Link href="/" className="logo">
         Arabulucu
       </Link>
@@ -15,11 +15,18 @@ const Navbar = () => {
         <ThemeToggle />
       </div>
       <div className="links">
-        <Link href="/blog">Blog</Link>
-        <Link href="/about">hakkımda</Link>
+        <Link href="/" className="link">
+          Ana Sayfa
+        </Link>
+        <Link href="/about" className="link">
+          Hakkımızda
+        </Link>
+        <Link href="/blog" className="link">
+          Blog
+        </Link>
       </div>
       <div
-        className={open ? "burger-menu active" : "burger-menu"}
+        className={`burger-menu ${open && "active"} `}
         onClick={() => setOpen((prev) => (prev ? false : true))}
       >
         <span></span>
