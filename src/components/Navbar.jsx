@@ -17,8 +17,8 @@ const links = [
   },
   {
     id: 3,
-    title: "Randevu",
-    url: "/appointment",
+    title: "Arabuluculuğa Başvur",
+    url: "/apply",
   },
   {
     id: 4,
