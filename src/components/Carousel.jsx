@@ -30,10 +30,10 @@ const Carousel = ({ items }) => {
             key={item.id}
             className={`carousel-item ${
               currentSlide.id > item.id
-                ? "next"
+                ? "prev"
                 : currentSlide.id === item.id
                 ? "active"
-                : "prev"
+                : "next"
             }`}
           >
             <img src={item.image} alt={item.title} />
