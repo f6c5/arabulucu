@@ -22,6 +22,11 @@ const Carousel = ({ items }) => {
     }
   };
 
+  useEffect(() => {
+    const timer = setInterval(handleNext, 3000);
+    return () => clearInterval(timer);
+  }, [currentSlide]);
+
   return (
     <div className="carousel">
       <div className="carousel-inner">
