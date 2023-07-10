@@ -1,7 +1,7 @@
 import "@/styles/globals.css";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import ReduxProvider from "@/redux/provider";
+import ReduxProvider from "@/redux/Provider.jsx";
 import ThemeProvider from "@/components/ThemeProvider";
 
 export const metadata = {

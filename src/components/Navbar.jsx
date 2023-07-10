@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import ThemeToggle from "./ThemeToggle";
+import ThemeToggle from "./ThemeToggle.jsx";
 
 const links = [
   {
