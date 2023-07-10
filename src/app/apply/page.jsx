@@ -16,6 +16,12 @@ const Apply = () => {
   };
   return (
     <div className="row jc-center">
+      <div className="mb-4">
+        <p className="text-center">
+          Arabuluculuk başvurunuza aşağıdaki formu doldurarak başlayabilirsiniz.
+          Arabulucularımız sizinle en kısa sürede iletişime geçicektir.
+        </p>
+      </div>
       <h2 className="alert text-center col-md-12 col-lg-6"> Başvuru Formu</h2>
       <div>
         <form className="row jc-center" onSubmit={handleSubmit}>
@@ -73,7 +79,7 @@ const Apply = () => {
                 style={{ width: "400px" }}
                 required
               >
-                <option value="" disabled selected hidden></option>
+                <option value="" disabled hidden></option>
                 <option value="2">Seçenek 2</option>
                 <option value="3">Seçenek 3</option>
               </select>
@@ -86,7 +92,7 @@ const Apply = () => {
                 style={{ width: "400px" }}
                 required
               >
-                <option value="" disabled selected hidden></option>
+                <option value="" disabled hidden></option>
                 <option value="2">Seçenek 2</option>
                 <option value="3">Seçenek 3</option>
               </select>
@@ -98,6 +104,7 @@ const Apply = () => {
                 placeholder=" "
                 onChange={(e) => setAddress(e.target.value)}
                 style={{ width: "400px" }}
+                required
               />
               <label>Adres</label>
             </div>
