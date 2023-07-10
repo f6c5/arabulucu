@@ -71,7 +71,7 @@ const Apply = () => {
               <label>Telefon</label>
             </div>
           </div>
-          <div className=" col-md-12 col-lg-6">
+          <div className="col-md-12 col-lg-6 d-flex jc-center fw-wrap">
             <div className="input my-2">
               <select
                 value={city}
