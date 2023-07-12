@@ -25,7 +25,7 @@ const Apply = () => {
       <h2 className="alert text-center col-md-12 col-lg-6"> Başvuru Formu</h2>
       <div>
         <form className="row jc-center" onSubmit={handleSubmit}>
-          <div className="col-md-12 col-lg-6 d-flex jc-center fw-wrap">
+          <div className="col-md-12 col-lg-6 d-flex jc-center flex-wrap">
             <div className="input my-2">
               <input
                 type="text"
@@ -71,7 +71,7 @@ const Apply = () => {
               <label>Telefon</label>
             </div>
           </div>
-          <div className="col-md-12 col-lg-6 d-flex jc-center fw-wrap">
+          <div className="col-md-12 col-lg-6 d-flex jc-center flex-wrap">
             <div className="input my-2">
               <select
                 value={city}
