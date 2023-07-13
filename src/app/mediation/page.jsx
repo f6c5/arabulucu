@@ -4,7 +4,7 @@ const Mediation = () => {
   return (
     <div>
       <div className="row jc-center">
-        <h1 className="alert col-lg-6 text-center mb-8">
+        <h1 className="col-sm-12 col-lg-6 text-center border-bottom-2 pb-2 mb-8">
           Arabuluculuk Nedir?
         </h1>
         <p className="mb-2">

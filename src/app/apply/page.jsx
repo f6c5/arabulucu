@@ -22,7 +22,10 @@ const Apply = () => {
           Arabulucularımız sizinle en kısa sürede iletişime geçicektir.
         </p>
       </div>
-      <h2 className="alert text-center col-md-12 col-lg-6"> Başvuru Formu</h2>
+      <h2 className="text-center col-sm-12 col-lg-6 border-bottom-2 pb-2 mb-4">
+        {" "}
+        Başvuru Formu
+      </h2>
       <div>
         <form className="row jc-center" onSubmit={handleSubmit}>
           <div className="col-md-12 col-lg-6 d-flex jc-center flex-wrap">
@@ -109,7 +112,10 @@ const Apply = () => {
               <label>Adres</label>
             </div>
           </div>
-          <button className="button  col-md-12 col-lg-6" type="submit">
+          <button
+            className="button-outline col-md-12 col-lg-6 mt-4"
+            type="submit"
+          >
             Başvuruyu Gönder
           </button>
         </form>
