@@ -1,9 +1,12 @@
-import Card from "@/components/Card";
-import React from "react";
+"use client";
 
-const mediators = [];
+import Card from "@/components/Card";
+import Link from "next/link";
+import React from "react";
+import { useSelector } from "react-redux";
 
 const About = () => {
+  const { mediators } = useSelector((store) => store.mediators);
   return (
     <div className="pt-8 d-flex jc-center flex-wrap">
       <div className="col-sm-12 col-lg-8">
@@ -53,7 +56,13 @@ const About = () => {
         <h1 className="text-center mt-8 border-bottom-2 pb-2 mb-2">
           Arabulucularımız
         </h1>
-        <div className="card-container"></div>
+        <div className="card-container">
+          {mediators.map((item) => (
+            <Link key={item.id} href={`/about/${item.id}`}>
+              <Card item={item} />
+            </Link>
+          ))}
+        </div>
       </div>
     </div>
   );

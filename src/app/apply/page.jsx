@@ -23,7 +23,6 @@ const Apply = () => {
         </p>
       </div>
       <h2 className="text-center col-sm-12 col-lg-6 border-bottom-2 pb-2 mb-4">
-        {" "}
         Başvuru Formu
       </h2>
       <div>
