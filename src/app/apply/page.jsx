@@ -59,16 +59,6 @@ const Apply = () => {
     } else {
       setActiveStep(steps[0]);
       console.log(step1Data, step2Data, step3Data);
-      toast.success("Başarılı", {
-        position: "top-right",
-        autoClose: 3000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
     }
   };
 
