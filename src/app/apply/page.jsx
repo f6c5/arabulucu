@@ -27,23 +27,23 @@ const Apply = () => {
   const [activeStep, setActiveStep] = useState(steps[0]);
 
   const [step1Data, setStep1Data] = useState({
-    firstName: "ferhat",
-    lastName: "çiçek",
-    email: "cicekf256@gmail.com",
-    tel: "5059983940",
-    city: "1",
-    district: "2",
-    address: "Telisz mah.",
+    firstName: "",
+    lastName: "",
+    email: "",
+    tel: "",
+    city: "",
+    district: "",
+    address: "",
   });
 
   const [step2Data, setStep2Data] = useState({
-    firstName: "aaaa",
-    lastName: "bbbb",
-    email: "asfsfa@gmail.com",
-    tel: "1234567890",
-    city: "1",
-    district: "2",
-    address: "ankara",
+    firstName: "",
+    lastName: "",
+    email: "",
+    tel: "",
+    city: "",
+    district: "",
+    address: "",
   });
 
   const [step3Data, setStep3Data] = useState({
