@@ -7,7 +7,7 @@ const FlatCard = ({ item }) => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const cardTop = cardRef.current.getBoundingClientRect().bottom;
+      const cardTop = cardRef.current.getBoundingClientRect().top;
       const windowHeight = window.innerHeight;
 
       if (cardTop < windowHeight) {
