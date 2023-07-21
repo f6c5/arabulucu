@@ -12,8 +12,8 @@ const links = [
   },
   {
     id: 2,
-    title: "Arabuluculuk",
-    url: "/mediation",
+    title: "makaleler",
+    url: "/articles",
   },
   {
     id: 3,
