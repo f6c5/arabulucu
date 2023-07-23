@@ -1,4 +1,5 @@
 "use client";
+import { useToast } from "@/components/FcToast/context";
 import React, { useState } from "react";
 
 const steps = [
@@ -50,15 +51,37 @@ const Apply = () => {
     conditions: "",
   });
 
+  const { toast } = useToast();
+
   const handleNext = (e) => {
     e.preventDefault();
 
     if (activeStep.id < steps.length) {
       setActiveStep(steps[activeStep.id]);
-      console.log("sonraki");
     } else {
       setActiveStep(steps[0]);
       console.log(step1Data, step2Data, step3Data);
+
+      toast.success({ message: "başvurunuz gönderildi" });
+      setStep1Data({
+        firstName: "",
+        lastName: "",
+        email: "",
+        tel: "",
+        city: "",
+        district: "",
+        address: "",
+      });
+      setStep2Data({
+        firstName: "",
+        lastName: "",
+        email: "",
+        tel: "",
+        city: "",
+        district: "",
+        address: "",
+      });
+      setStep3Data({ reason: "", conditions: "" });
     }
   };
 

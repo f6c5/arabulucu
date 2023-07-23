@@ -12,7 +12,27 @@ const page = () => {
     <div>
       <Carousel items={carouselItems} />
 
-      <div className="d-flex jc-center">
+      <div className="row jc-center">
+        <div className="col-10">
+          <h1 className="col-sm-12 text-center border-bottom-2 pb-2 mb-8">
+            Arabuluculuk Nedir?
+          </h1>
+          <p className="mb-2">
+            Arabuluculuk, çeşitli taraflar arasında çıkan anlaşmazlıkları çözmek
+            için kullanılan etkili bir alternatif çözüm yöntemidir.
+            Arabuluculuk, geleneksel mahkeme sürecinden farklı olarak, taraflar
+            arasında anlaşmazlık konusunda bir uzlaşma sağlamayı hedefler ve
+            çözümü sağlamak için bir arabulucunun yardımına başvurur.
+          </p>
+          <p className="mb-2">
+            Arabuluculuk, uyuşmazlığın çözümünde daha hızlı, daha ekonomik ve
+            daha az resmi bir yol sunar. Taraflar, arabuluculuk sürecinde daha
+            fazla kontrol sahibidir ve sonuç üzerinde karar verme yetkisine
+            sahiptir. Arabuluculuk ayrıca taraflar arasındaki ilişkilerin daha
+            az zarar görmesini sağlar ve çözüm sürecinin daha adil ve
+            sürdürülebilir olmasına yardımcı olur.
+          </p>
+        </div>
         <div className="col-10">
           {flatCardItems.map((item) => (
             <FlatCard key={item.id} item={item} />

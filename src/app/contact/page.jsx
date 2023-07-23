@@ -1,5 +1,6 @@
 "use client";
 
+import { useToast } from "@/components/FcToast/context";
 import Link from "next/link";
 import React, { useState } from "react";
 import { MdLocationPin, MdMailOutline, MdPhone } from "react-icons/md";
@@ -9,9 +10,15 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
 
+  const { toast } = useToast();
+
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log({ fullName, email, message });
+    toast.success({ message: "mesajınız iletildi" });
+    setFullName("");
+    setEmail("");
+    setMessage("");
   };
 
   return (

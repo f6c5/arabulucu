@@ -1,0 +1,41 @@
+.toast-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+
+.toast {
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.toast.default {
+  background-color: #333333;
+  color: #ffffff;
+}
+
+/* Info Toast */
+.toast.info {
+  background-color: #3498db;
+  color: #fff;
+}
+
+/* Warning Toast */
+.toast.warning {
+  background-color: #f39c12;
+  color: #fff;
+}
+
+/* Error Toast */
+.toast.error {
+  background-color: #e74c3c;
+  color: #fff;
+}
+
+/* Success Toast */
+.toast.success {
+  background-color: #58c473;
+  color: #fff;
+}

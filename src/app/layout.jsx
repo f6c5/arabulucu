@@ -3,6 +3,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import ReduxProvider from "@/redux/Provider.jsx";
 import ThemeProvider from "@/components/ThemeProvider";
+import ToastProvider from "@/components/FcToast/context";
 
 export const metadata = {
   title: "Arabulucu",
@@ -19,13 +20,15 @@ export default function RootLayout({ children }) {
       <body>
         <ReduxProvider>
           <ThemeProvider>
-            <div className="container">
-              <nav>
-                <Navbar />
-              </nav>
-              <main>{children}</main>
-              <Footer />
-            </div>
+            <ToastProvider>
+              <div className="container">
+                <nav>
+                  <Navbar />
+                </nav>
+                <main>{children}</main>
+                <Footer />
+              </div>
+            </ToastProvider>
           </ThemeProvider>
         </ReduxProvider>
       </body>
