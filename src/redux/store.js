@@ -1,6 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import { carouselItems, flatCardItems, mediators, theme } from "./entities";
+import {
+  articles,
+  carouselItems,
+  flatCardItems,
+  mediators,
+  theme,
+} from "./entities";
 
 const store = configureStore({
   reducer: {
@@ -8,6 +14,7 @@ const store = configureStore({
     carouselItems: carouselItems.reducer,
     mediators: mediators.reducer,
     flatCardItems: flatCardItems.reducer,
+    articles: articles.reducer,
   },
 });
 

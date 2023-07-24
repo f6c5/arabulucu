@@ -187,3 +187,115 @@ export const flatCardItems = createSlice({
 });
 
 export const {} = flatCardItems.actions;
+
+export const articles = createSlice({
+  name: "articles",
+  initialState: {
+    articles: [
+      {
+        id: 1,
+        title: "beat",
+        cover:
+          "beatsetting putting fast parts behavior carefully cloud poet worker deer open other shadow fact increase nodded table myself became pile do becoming without because joined fairly fat hand stomach frog breath stopped next children victory whispered strip western light joy drew rabbit wheat largest finest decide dress ",
+        content:
+          "tiedrove knowledge willing let health blow screen understanding consider tea trouble feet naturally figure teach electric pen later busy produce speed nice drive harbor successfulprepare middle arrange pot copper cow coal matter television lie herself familiar chief trade scale shake track cake drawn like race powerful both pastgot themselves weigh stems see luck large plate chemical tiny green twice truck spent cent would badly sell history reader check orbit seat routemassage lose firm stove poor closely number dig unit feel sound silver ago circus spin dug drink pain language weak water tell flew run bit cap mail leg rays watch jump breathe capital lack give broken gulf indicate enemy why wrapped mind golden eye bring flower brown sight regular soon hunter baby trap mark how seeing silent activity apple earn contrast promised cowboy experience century pan information damage grass general",
+        image: "/images/1.png",
+        comments: [
+          {
+            id: 1690223133267,
+            author: "aa",
+            content: "asasfsaas asfas",
+            date: "22.07.2023",
+            likes: [],
+            comments: [
+              {
+                id: 169022313326,
+                author: "aaasasga",
+                content: "asasfsaas asfas",
+                date: "21.07.2023",
+                likes: [],
+                comments: [],
+              },
+            ],
+          },
+        ],
+      },
+      {
+        id: 2,
+        title: "respect",
+        cover:
+          "respect noon mood path bare birth mine sugar hearing consist spite moving drop include birthday although swung figure shelf promised roar medicine dish listen beansurface degree bean mistake course should end recognize ship orbit pale serious guard load everybody income four pig onto tube its bear butter",
+        content:
+          "nose ready band excitement joined graph giant thus fair more forty feel promised spring load book image troops mixture crop negative thin careful sentence compareboy available plate realize clothing understanding active shall middle tin divide as outline sad usual place ride should exciting least bound cold brick",
+        image: "/images/2.png",
+        comments: [
+          {
+            id: 1,
+            author: "aa",
+            content: "asasfsaas asfas",
+            date: "21.07.2023",
+            likes: [],
+            subComments: [],
+          },
+        ],
+      },
+      {
+        id: 3,
+        title: "slave",
+        cover:
+          "slave chamber respect chemical variety well paragraph including mail sick gave solar mouse anything noon cat stranger label rush figure mine vessels began play",
+        content:
+          "crowd eaten nor sure are dress special upper political ride frequently went join rhyme known donkey grown west dawn ball habit essential advice game",
+        image: "/images/5.png",
+        comments: [],
+      },
+      {
+        id: 4,
+        title: "hope",
+        cover:
+          "hope principal store paragraph structure try safe afternoon later flag pine air drive story pie within frame thick rear smaller shout plural street smallest",
+        content:
+          "entirely attack kind slide pet diameter fine see adjective parallel free studied wooden labor given what blow almost add water balloon power his book",
+        image: "/images/4.png",
+        comments: [],
+      },
+    ],
+  },
+  reducers: {
+    addComment: (state, action) => {
+      const { articleId, comment } = action.payload;
+      const article = state.articles.find(
+        (article) => article.id === articleId
+      );
+
+      if (article) {
+        article.comments.push(comment);
+      }
+    },
+    replyComment: (state, action) => {
+      const { articleId, commentId, reply } = action.payload;
+      const article = state.articles.find(
+        (article) => article.id === articleId
+      );
+
+      if (article) {
+        const findComment = (comments) => {
+          for (const comment of comments) {
+            if (comment.id === commentId) {
+              comment.comments.push(reply);
+              return true;
+            } else if (comment.comments.length > 0) {
+              const found = findComment(comment.comments);
+              if (found) return true;
+            }
+          }
+          return false;
+        };
+
+        findComment(article.comments);
+      }
+    },
+  },
+});
+
+export const { addComment, replyComment } = articles.actions;
