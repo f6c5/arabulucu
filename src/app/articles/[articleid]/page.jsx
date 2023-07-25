@@ -1,10 +1,10 @@
 "use client";
 
-import Comments from "@/components/Comments";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
+import Comments from "@/components/Comments";
 
-const Article = ({ params: { articleId } }) => {
+const article = ({ params: { articleId } }) => {
   const [article, setArticle] = useState({});
   const { articles } = useSelector((store) => store.articles);
 
@@ -31,10 +31,10 @@ const Article = ({ params: { articleId } }) => {
         <p>{article.content}</p>
       </div>
       <div className="col-sm-12 col-lg-10 mb-4">
-        <Comments comments={article.comments} articleId={articleId} />
+        <Comments comments={article.comments} articleId={article.id} />
       </div>
     </div>
   );
 };
 
-export default Article;
+export default article;

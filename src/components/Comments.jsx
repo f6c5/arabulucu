@@ -9,7 +9,7 @@ const Comments = ({ comments, articleId }) => {
 
   const handleComment = () => {
     addCommentStore({
-      articleId: parseInt(articleId),
+      articleId: articleId,
       comment: {
         id: Date.now(),
         author: "kullanıcı",
@@ -45,8 +45,8 @@ const Comment = ({ comment, articleId }) => {
 
   const handleComment = (commentId) => {
     replyCommentStore({
-      commentId: parseInt(commentId),
-      articleId: parseInt(articleId),
+      commentId: commentId,
+      articleId: articleId,
       reply: {
         id: Date.now(),
         author: "kullanıcı",
