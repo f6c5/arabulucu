@@ -65,3 +65,17 @@
   color: var(--grey-900);
   min-height: 120px;
 }
+
+.card-list {
+  padding-left: 20px;
+  list-style-type: none;
+}
+
+.card-list li:before {
+  content: "\2756";
+  margin-right: 10px;
+}
+
+.card-list li {
+  margin-top: 5px;
+}
