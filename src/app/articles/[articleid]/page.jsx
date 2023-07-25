@@ -30,7 +30,7 @@ const Article = ({ params: { articleId } }) => {
         <p>{article.content}</p>
       </div>
       <div className="col-sm-12 col-lg-10 mb-4">
-        <Comments comments={article.comments} articleId={articleId} />
+        {/* <Comments comments={article.comments} articleId={articleId} /> */}
       </div>
     </div>
   );
