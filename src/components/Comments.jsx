@@ -1,4 +1,3 @@
-"use client";
 
 import { addCommentStore, replyCommentStore } from "@/redux";
 import React, { useState } from "react";
