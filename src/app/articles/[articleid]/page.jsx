@@ -4,17 +4,16 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Comments from "@/components/Comments";
 
-const article = ({ params: { articleId }, params }) => {
+const article = ({ params: { articleid } }) => {
   const [article, setArticle] = useState({});
   const { articles } = useSelector((store) => store.articles);
-  console.log(params);
-  // useEffect(() => {
-  //   setArticle(articles.find((article) => article.id === parseInt(articleId)));
-  // }, [articles]);
+  useEffect(() => {
+    setArticle(articles.find((article) => article.id === parseInt(articleid)));
+  }, [articles]);
 
   return (
     <div className="row jc-center">
-      {/* <div className="col-sm-12 col-lg-10 d-flex jc-center mb-4">
+      <div className="col-sm-12 col-lg-10 d-flex jc-center mb-4">
         <img
           src={article.image}
           alt={article.title}
@@ -32,8 +31,7 @@ const article = ({ params: { articleId }, params }) => {
       </div>
       <div className="col-sm-12 col-lg-10 mb-4">
         <Comments comments={article.comments} articleId={article.id} />
-      </div> */}
-      {articleId}
+      </div>
     </div>
   );
 };
