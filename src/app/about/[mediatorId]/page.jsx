@@ -3,11 +3,11 @@
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 
-const mediator = ({ params: { mediatorId }, params }) => {
+const mediator = ({ params: { mediatorId } }) => {
   const [mediator, setMediator] = useState({});
 
   const { mediators } = useSelector((store) => store.mediators);
-  console.log(params);
+
   useEffect(() => {
     setMediator(
       mediators.find((mediator) => mediator.id === parseInt(mediatorId))

@@ -7,6 +7,7 @@ import Comments from "@/components/Comments";
 const article = ({ params: { articleid } }) => {
   const [article, setArticle] = useState({});
   const { articles } = useSelector((store) => store.articles);
+  
   useEffect(() => {
     setArticle(articles.find((article) => article.id === parseInt(articleid)));
   }, [articles]);
