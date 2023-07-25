@@ -16,7 +16,7 @@ const article = ({ params: { articleId } }) => {
     <div className="row jc-center">
       <div className="col-sm-12 col-lg-10 d-flex jc-center mb-4">
         <img
-          src="/images/1.png"
+          src={article.image}
           alt={article.title}
           style={{
             height: "500px",
