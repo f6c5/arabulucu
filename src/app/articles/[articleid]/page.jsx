@@ -4,10 +4,10 @@ import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Comments from "@/components/Comments";
 
-const article = ({ params: { articleId } }) => {
+const article = ({ params: { articleId }, params }) => {
   const [article, setArticle] = useState({});
   const { articles } = useSelector((store) => store.articles);
-
+  console.log(params);
   // useEffect(() => {
   //   setArticle(articles.find((article) => article.id === parseInt(articleId)));
   // }, [articles]);
