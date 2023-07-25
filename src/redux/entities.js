@@ -235,7 +235,7 @@ export const articles = createSlice({
             content: "asasfsaas asfas",
             date: "21.07.2023",
             likes: [],
-            subComments: [],
+            comments: [],
           },
         ],
       },
