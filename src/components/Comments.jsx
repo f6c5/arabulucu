@@ -12,29 +12,25 @@ const Comments = ({ comments, articleId }) => {
       articleId: parseInt(articleId),
       comment: {
         id: Date.now(),
-        author: "asfsassa",
+        author: "kullanıcı",
         content: commentContent,
         date: new Intl.DateTimeFormat("tr").format(new Date()),
         likes: [],
         comments: [],
       },
     });
+
+    setCommentContet("");
   };
 
   return (
     <div className="comment-container">
       <h2 className="border-bottom-2 mb-1 pb-1 text-center">Yorumlar</h2>
-      <div className="comment">
-        <textarea
-          value={commentContent}
-          placeholder=" Yorum yaz"
-          onChange={(e) => setCommentContet(e.target.value)}
-          style={{ width: "100%" }}
-        />
-        <button className="button" onClick={handleComment}>
-          Yorum Yap
-        </button>
-      </div>
+      <CommentArea
+        commentContent={commentContent}
+        setCommentContet={setCommentContet}
+        handleComment={handleComment}
+      />
       {comments?.length > 0 &&
         comments.map((comment) => (
           <Comment key={comment.id} comment={comment} articleId={articleId} />
@@ -44,21 +40,25 @@ const Comments = ({ comments, articleId }) => {
 };
 
 const Comment = ({ comment, articleId }) => {
-  const [commentContent, setCommentContet] = useState("gdfhdfh");
+  const [commentContent, setCommentContet] = useState("");
+  const [replyShow, setReplyShow] = useState(false);
 
-  const handleSubComment = (commentId) => {
+  const handleComment = (commentId) => {
     replyCommentStore({
       commentId: parseInt(commentId),
       articleId: parseInt(articleId),
       reply: {
         id: Date.now(),
-        author: "asfsassa",
+        author: "kullanıcı",
         content: commentContent,
         date: new Intl.DateTimeFormat("tr").format(new Date()),
         likes: [],
         comments: [],
       },
     });
+
+    setReplyShow(false);
+    setCommentContet("");
   };
 
   return (
@@ -70,10 +70,21 @@ const Comment = ({ comment, articleId }) => {
         <HiOutlineHeart style={{ marginRight: "8px", alignItems: "center" }} />
         {comment.likes.length}
       </button>
-      <button className="button" onClick={() => handleSubComment(comment.id)}>
-        <HiOutlineReply style={{ marginRight: "8px", alignItems: "center" }} />
-        yanıtla
-      </button>
+      {replyShow ? (
+        <CommentArea
+          commentContent={commentContent}
+          setCommentContet={setCommentContet}
+          handleComment={handleComment}
+          commentId={comment.id}
+        />
+      ) : (
+        <button className="button" onClick={() => setReplyShow(true)}>
+          <HiOutlineReply
+            style={{ marginRight: "8px", alignItems: "center" }}
+          />
+          yanıtla
+        </button>
+      )}
       {comment?.comments.length > 0 &&
         comment.comments.map((c) => (
           <Comment key={c.id} comment={c} articleId={articleId} />
@@ -82,9 +93,12 @@ const Comment = ({ comment, articleId }) => {
   );
 };
 
-const CommentArea = () => {
-  const [commentContent, setCommentContet] = useState("");
-  
+const CommentArea = ({
+  commentContent,
+  setCommentContet,
+  handleComment,
+  commentId,
+}) => {
   return (
     <div className="comment">
       <textarea
@@ -93,7 +107,7 @@ const CommentArea = () => {
         onChange={(e) => setCommentContet(e.target.value)}
         style={{ width: "100%" }}
       />
-      <button className="button" onClick={handleComment}>
+      <button className="button" onClick={() => handleComment(commentId)}>
         Yorum Yap
       </button>
     </div>

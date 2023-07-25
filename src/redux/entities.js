@@ -203,14 +203,14 @@ export const articles = createSlice({
         comments: [
           {
             id: 1690223133267,
-            author: "aa",
+            author: "kullanıcı 1",
             content: "asasfsaas asfas",
             date: "22.07.2023",
             likes: [],
             comments: [
               {
                 id: 169022313326,
-                author: "aaasasga",
+                author: "kullanıcı 2",
                 content: "asasfsaas asfas",
                 date: "21.07.2023",
                 likes: [],
