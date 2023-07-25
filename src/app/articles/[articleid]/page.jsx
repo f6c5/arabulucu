@@ -8,14 +8,14 @@ const article = ({ params: { articleId } }) => {
   const [article, setArticle] = useState({});
   const { articles } = useSelector((store) => store.articles);
 
-  useEffect(() => {
-    setArticle(articles.find((article) => article.id === parseInt(articleId)));
-  }, [articles]);
+  // useEffect(() => {
+  //   setArticle(articles.find((article) => article.id === parseInt(articleId)));
+  // }, [articles]);
 
   return (
     <div className="row jc-center">
-      <div className="col-sm-12 col-lg-10 d-flex jc-center mb-4">
-        {/* <img
+      {/* <div className="col-sm-12 col-lg-10 d-flex jc-center mb-4">
+        <img
           src={article.image}
           alt={article.title}
           style={{
@@ -23,7 +23,7 @@ const article = ({ params: { articleId } }) => {
             objectFit: "contain",
             marginBottom: "2rem",
           }}
-        /> */}
+        />
       </div>
       <div className="col-sm-12 col-lg-10 mb-4">
         <h2 className="border-bottom-2 mb-1 pb-1"> {article.title}</h2>
@@ -31,8 +31,9 @@ const article = ({ params: { articleId } }) => {
         <p>{article.content}</p>
       </div>
       <div className="col-sm-12 col-lg-10 mb-4">
-        {/* <Comments comments={article.comments} articleId={article.id} /> */}
-      </div>
+        <Comments comments={article.comments} articleId={article.id} />
+      </div> */}
+      {articleId}
     </div>
   );
 };
