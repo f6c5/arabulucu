@@ -13,7 +13,7 @@ const page = () => {
       <Carousel items={carouselItems} />
 
       <div className="row jc-center">
-        <div className="col-10">
+        <div className="col-sm-12 col-lg-10">
           <div className="flat-card">
             <div className="card-body">
               <h1 className="col-sm-12 text-center border-bottom-2 pb-2 mb-8">
@@ -38,7 +38,7 @@ const page = () => {
             </div>
           </div>
         </div>
-        <div className="col-10">
+        <div className="col-sm-12 col-lg-10">
           <div className="flat-card">
             <div className="card-body">
               <h1 className="col-sm-12 text-center border-bottom-2 pb-2 mb-2">
