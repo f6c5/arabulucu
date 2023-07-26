@@ -8,7 +8,7 @@ import ToastProvider from "@/components/FcToast/context";
 export const metadata = {
   title: "Arabulucu",
   description:
-    "Arabuluculuk Hizmetleri - Anlaşmazlıkları çözmek için profesyonel arabuluculuk hizmetleri sunuyoruz. Deneyimli ve uzman arabulucularımız, ticari, aile, işyeri ve diğer alanlarda arabuluculuk sürecini yönetir. Anlaşmazlıklarınızı hızlı, etkili ve maliyet açısından avantajlı bir şekilde çözmek için arabuluculuğun gücünden faydalanın. Randevu talepleri için web sitemizi ziyaret edin ve alanında uzman arabulucularımızla iletişime geçin.",
+    "Çatışmalarınızı çözmek için güvenilir arabuluculuk hizmetleri sunuyoruz. Uzman ekibimizle sorunlarınıza adil ve etkili çözümler bulun.",
 };
 
 export default function RootLayout({ children }) {
