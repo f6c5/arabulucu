@@ -44,6 +44,23 @@ const page = () => {
               <h1 className="col-sm-12 text-center border-bottom-2 pb-2 mb-2">
                 Neden Arabuluculuk?
               </h1>
+              <p className="mb-2">
+                Arabuluculuğu tercih etmek, çeşitli avantajlardan yararlanmamızı
+                sağlar. Öncelikle, arabuluculuk hızlı ve verimli bir çözüm
+                sağlar, uzun ve maliyetli yargı süreçlerine gerek kalmadan
+                tarafların anlaşmasına olanak tanır. Bu sayede maliyetler
+                düşerken, kontrol de taraflara verilir ve sonucun nasıl
+                şekilleneceğine katılımcılar karar verebilir. Ayrıca,
+                arabuluculuk sürdürülebilir uzlaşmayı destekler; taraflar
+                arasındaki ilişkiler zarar görmeden sorunları çözmeye odaklanır.
+                Mahremiyet ve gizlilik ise tarafların açıklamalarını özgürce
+                yapabilmesini sağlar ve bu da güvenli bir iletişim ortamı
+                oluşturur. Esneklik ise çözüm sürecinin tarafların ihtiyaçlarına
+                uygun bir şekilde şekillendirilebilmesine imkan tanır. Tüm bu
+                nedenlerle, arabuluculuk, çatışmaları daha uygun ve işbirlikçi
+                bir yöntemle çözmek için tercih edilen bir yol olmalıdır.
+              </p>
+              <h3 className="d-inline border-bottom-2">Kısaca:</h3>
               <ul className="mb-2 card-list">
                 <li>Hızlı ve Verimli Çözüm</li>
                 <li>Daha Düşük Maliyetler</li>
